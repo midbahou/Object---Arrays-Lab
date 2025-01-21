@@ -1,5 +1,5 @@
 
-// ============================================ Part 2: Expanding Functionality =====================================================
+//* ============================================ Part 2: Expanding Functionality =====================================================
 
 // Example CSV string
 const csvString = `ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26`;
@@ -29,7 +29,7 @@ console.log(`Number of columns: ${columnCount}`);
 
 
 
-// ============================================ Part 3: Transforming Data =====================================================
+//* ============================================ Part 3: Transforming Data =====================================================
 
 // Define the CSV Data
 const parsedCSV = [
@@ -70,29 +70,36 @@ console.log(transformedData);
 
 
 
-// ============================================ Part 4: Sorting and Manipulating Data =====================================================
+//* ============================================ Part 4: Sorting and Manipulating Data =====================================================
 
 // The pop() method removes the last element from the array.
 transformedData.pop();  // The transformedData array is now one item shorter than before.
-console.log(transformedData);
+console.log(transformedData); // the last item {id: '98', name: 'Bill', occupation: 'Doctor’s Assistant', age: '26'} is removed,
 
 
+// After calling splice(1, 0, ...), the new object { id: "48", name: "Barry", occupation: "Runner", age: "25" } is inserted at index 1 in the transformedData array.
 transformedData.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
 
+
+// pusg(), adds the object { id: "7", name: "Bilbo", occupation: "None", age: "111" } to the end of the transformedData array.
 transformedData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
-let ageSum = 0;
+
+//*TODO: Calculating the Average Age:
+// This code calculates the average age of all the people in the transformedData array.
+let ageSum = 0; // A variable ageSum is initialized to 0. It will hold the total sum of all ages.
 for (let i = 0; i < transformedData.length; i++) {
   ageSum += parseInt(transformedData[i].age); // Convert age to a number
 }
-let averageAge = ageSum / transformedData.length;
-console.log("Average Age:", averageAge);
+
+let averageAge = ageSum / transformedData.length; // calculates the average by dividing the total sum of ages by the number of entries in the transformedData array.
+console.log("Average Age:", averageAge); // prints the calculated average age to the console.
 
 
 
 
 
-// ============================================ Part 5: Full Circle =====================================================
+//* ================================================= Part 5: Full Circle ================================================================
 
 let transformedDataP5 = [
     { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
