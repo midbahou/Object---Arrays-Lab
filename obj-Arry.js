@@ -89,7 +89,7 @@ transformedData.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
 // This code calculates the average age of all the people in the transformedData array.
 let ageSum = 0; // A variable ageSum is initialized to 0. It will hold the total sum of all ages.
 for (let i = 0; i < transformedData.length; i++) {
-  ageSum += parseInt(transformedData[i].age); // Convert age to a number
+  ageSum += parseInt(transformedData[i].age); // converts the age string to an integer 
 }
 
 let averageAge = ageSum / transformedData.length; // calculates the average by dividing the total sum of ages by the number of entries in the transformedData array.
